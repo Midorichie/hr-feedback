@@ -1,7 +1,7 @@
 [project]
 name = "hr-feedback"
 authors = []
-description = "A decentralized HR performance review and feedback system"
+description = "A decentralized HR performance review and feedback system with rewards"
 telemetry = false
 requirements = []
 boot_contracts = ["pox", "costs-v2", "bns"]
@@ -9,6 +9,10 @@ boot_contracts = ["pox", "costs-v2", "bns"]
 [contracts.hr-feedback]
 path = "contracts/hr-feedback.clar"
 depends_on = []
+
+[contracts.rewards]
+path = "contracts/rewards.clar"
+depends_on = ["hr-feedback"]
 
 [repl]
 costs_version = 2
